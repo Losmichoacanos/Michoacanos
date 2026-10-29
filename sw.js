@@ -1,5 +1,5 @@
 // Guarda la app en el iPad para que abra sin internet.
-const CACHE = 'michoacanos-v1';
+const CACHE = 'michoacanos-v2';
 const FILES = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
